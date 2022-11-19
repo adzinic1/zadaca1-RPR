@@ -6,13 +6,13 @@ public class App  {
     public static void main(String[] args) throws RuntimeException{
 
         Scanner unos = new Scanner(System.in);
-        System.out.println("Unesite željeni izraz: ");
+        System.out.println("Unesite zeljeni izraz: ");
         String izraz = unos.nextLine();
 
         try {
             System.out.println(ExpressionEvaluator.evaluate(String.valueOf(izraz)));
         } catch (RuntimeException e) {
-            System.out.println("Uneseni izraz nije aritmetički validan.");
+            System.out.println("Uneseni izraz nije aritmeticki validan.");
         }
     }
 }

@@ -50,15 +50,15 @@ public class ExpressionEvaluator {
         int razmak = 0;
 
             try {
-                if (brojZagrada(args) == 0 || brojZagrada(args) == 1 ) throw new RuntimeException("Uneseni izraz nije aritmetički validan.");
+                if (brojZagrada(args) == 0 || brojZagrada(args) == 1 ) throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
             }catch (RuntimeException e){
-                throw new RuntimeException("Uneseni izraz nije aritmetički validan.");
+                throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
             }
 
         for (int i = 0; i < args.length();) {
             if (args.charAt(i) == ' ') {
                 if (razmak++ > 0) {
-                    throw new RuntimeException("Uneseni izraz nije aritmetički validan.");
+                    throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
                 }
                 i++;
                 continue;
@@ -115,7 +115,7 @@ public class ExpressionEvaluator {
                     try {
                         vals.push(Double.parseDouble(znak));
                     } catch (NumberFormatException e) {
-                        throw new RuntimeException("Uneseni izraz nije aritmetički validan.");
+                        throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
                     }
                     break;
             }
