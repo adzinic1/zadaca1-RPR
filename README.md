@@ -1,1 +1,3 @@
-# Dijkstra’s Algorithm for expression evaluation
+# Dijkstra’s algorithm for arithmetic expression evaluation
+
+
