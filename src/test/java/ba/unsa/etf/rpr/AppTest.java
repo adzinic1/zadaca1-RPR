@@ -1,20 +1,32 @@
 package ba.unsa.etf.rpr;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
+
     /**
-     * Rigorous Test :-)
+     * Test za main kada uneseni izraz nije aritmetički validan
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void pogresanUnos()
     {
-        assertTrue( true );
+        String[] izraz = new String[] {"(", "4", "+", "3)", ")"};
+        App.main(izraz);
+    }
+
+    /**
+     * Test za main kada je uneseni izraz aritmetički validan
+     */
+    @Test
+    public void validanUnos() {
+        String[] izraz = new String[]{"(", "4", "+", "3", ")"};
+        App.main(izraz);
     }
 }
+
+
+
+
