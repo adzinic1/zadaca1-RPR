@@ -17,6 +17,7 @@ public class AppTest {
         App.main(string);
     }
 
+
     /**
      * Tests for main when the entered expression is arithmetically valid
      */
