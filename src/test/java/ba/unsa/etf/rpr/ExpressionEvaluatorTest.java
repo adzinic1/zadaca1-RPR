@@ -34,6 +34,7 @@ class ExpressionEvaluatorTest {
         assertThrows(RuntimeException.class, () -> ExpressionEvaluator.evaluate(s));
     }
 
+
     /**
      * Tests the same number of open and closed parentheses, but they are in the wrong places
      */
