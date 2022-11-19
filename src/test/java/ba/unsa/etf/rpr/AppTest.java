@@ -13,7 +13,7 @@ public class AppTest {
     @Test
     public void pogresanUnos()
     {
-        String[] izraz = new String[] {"(", "4", "+", "3)", ")"};
+        String[] izraz = new String[] {"4", "+", "3"};
         App.main(izraz);
     }
 
