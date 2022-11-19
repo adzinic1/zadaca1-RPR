@@ -3,42 +3,43 @@ package ba.unsa.etf.rpr;
 import java.util.Stack;
 
 public class ExpressionEvaluator {
-    public static Double evaluate(String[] args) {
+    public static Stack<Double> evaluate(String[] args) {
         Stack<String> ops = new Stack<String>();
         Stack<Double> vals = new Stack<Double>();
 
-        while (!StdIn.isEmpty()) {
-            String s = StdIn.readString();
-            if (s.equals("(")) {
-                if (s.equals("+"))
-                    ops.push(s);
-                else if (s.equals("-"))
-                    ops.push(s);
-                else if (s.equals("*"))
-                    ops.push(s);
-                else if (s.equals("/"))
-                    ops.push(s);
-                else if (s.equals("sqrt"))
-                    ops.push(s);
-            } else if (s.equals(")")) {
+        for (int i = 0 ; i < args.length ; i++) {
+            if (args[i].equals("("));
+            else if (args[i].equals("+")) {
+                ops.push(args[i]);
+            } else if (args[i].equals("-")) {
+                ops.push(args[i]);
+            } else if (args[i].equals("*")) {
+                ops.push(args[i]);
+            } else if (args[i].equals("/")) {
+                ops.push(args[i]);
+            } else if (args[i].equals(")")){
+
                 String op = ops.pop();
                 double v = vals.pop();
 
-                if (op.equals("+"))
+                if(op.equals("+")){
                     v = vals.pop() + v;
-                else if (op.equals("-"))
+                } else if(op.equals("-")){
                     v = vals.pop() - v;
-                else if (op.equals("*"))
-                    v = vals.pop() * v;
-                else if (op.equals("/"))
-                    v = vals.pop() / v;
-                else if (op.equals("sqrt"))
-                    v = Math.sqrt(v);
+                } else if(op.equals("*")) {
+                    v = vals.pop() - v;
+                } else if(op.equals("/")) {
+                    v = vals.pop() - v;
+                }
                 vals.push(v);
-            } else vals.push(Double.parseDouble(s));
+            }
+            else{
+                vals.push(Double.parseDouble(args[i]));
+            }
         }
-        StdOut.println(vals.pop());
-        return null;
+        return vals;
+    }
     }
 
-}
+
+
