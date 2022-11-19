@@ -8,7 +8,7 @@ class ExpressionEvaluatorTest {
 
 
     /**
-     * Testira sqrt funkciju
+     * Tests sqrt function
      */
     @Test
     void sqrtTest(){
@@ -17,7 +17,7 @@ class ExpressionEvaluatorTest {
     }
 
     /**
-     * Nema zagrade nikako
+     * Tests when there are no parentheses
      */
     @Test
     void faliZagradaTest(){
@@ -26,7 +26,7 @@ class ExpressionEvaluatorTest {
     }
 
     /**
-     * Dobar broj zagrada ali nisu dobri operandi
+     * Tests correct number of parentheses but not appropriate operands
      */
     @Test
     void pogresniOperandiTest(){
@@ -35,7 +35,7 @@ class ExpressionEvaluatorTest {
     }
 
     /**
-     * Jednak broj otvorenih i zatvorenih zagrada, ali su na pogresnim mjestima
+     * Tests the same number of open and closed parentheses, but they are in the wrong places
      */
     @Test
     void rasporedZagradaTest(){
@@ -44,7 +44,7 @@ class ExpressionEvaluatorTest {
     }
 
     /**
-     * Fali razmak
+     * Tests missing whitespace
      */
     @Test
     void razmakManjkaTest(){
