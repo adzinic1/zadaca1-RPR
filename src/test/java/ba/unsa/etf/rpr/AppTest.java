@@ -8,22 +8,22 @@ import org.junit.Test;
 public class AppTest {
 
     /**
-     * Test za main kada uneseni izraz nije aritmetički validan
+     * Tests for main when the entered expression is not arithmetically valid
      */
     @Test
-    public void pogresanUnos()
+    public void wrongInput()
     {
-        String[] izraz = new String[] {"4", "+", "3"};
-        App.main(izraz);
+        String[] string = new String[] {"4", "+", "3"};
+        App.main(string);
     }
 
     /**
-     * Test za main kada je uneseni izraz aritmetički validan
+     * Tests for main when the entered expression is arithmetically valid
      */
     @Test
-    public void validanUnos() {
-        String[] izraz = new String[]{"(", "4", "+", "3", ")"};
-        App.main(izraz);
+    public void validInput() {
+        String[] string = new String[]{"(", "4", "+", "3", ")"};
+        App.main(string);
     }
 }
 
