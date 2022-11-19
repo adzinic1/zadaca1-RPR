@@ -26,7 +26,7 @@ public class ExpressionEvaluator {
      * @param args A string containing the entered expression.
      * @return 1 if an empty expression is entered, 2 if the number of open and closed parentheses is the same and 0 if the number of parentheses is different.
      */
-    public static int brojZagrada(String args){
+    public static int parenthesisNumber(String args){
         int openParenthesisCounter=0;
         int closedParenthesisCounter=0;
         for (int i = 0 ; i < args.length() ; i++) {
@@ -50,7 +50,7 @@ public class ExpressionEvaluator {
         int razmak = 0;
 
             try {
-                if (brojZagrada(args) == 0 || brojZagrada(args) == 1 ) throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
+                if (parenthesisNumber(args) == 0 || parenthesisNumber(args) == 1 ) throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
             }catch (RuntimeException e){
                 throw new RuntimeException("Uneseni izraz nije aritmeticki validan.");
             }
